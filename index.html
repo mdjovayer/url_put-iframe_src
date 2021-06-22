@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Daily Update</title>
+</head>
+<style type="text/css">
+	body{
+		margin: 0;
+		padding: 0;
+		background: #d93025;
+	}
+	.container{
+		margin: 30px;
+		padding: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	h3{
+		color: #fff;
+		margin: 30px;
+		padding: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+</style>
+<body>
+
+<div class="container">
+	
+<iframe width="560" height="315" id="myIframe" src="https://www.youtube.com/embed/" title="We are Provide Thes Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</div>
+
+<h3>আামাদের ওয়েবসাইট আমার পিমিয়ার এপিসোড প্রতিদিন আপলোড করি। 
+প্রতি দিন ভিডিও পেতে আমাদের চ্যানেলের সাথে থাকুন।</h3> 
+
+
+<script type="text/javascript">
+var url = window.location.href;
+var lastPart = url.split('#').pop();
+
+//console.log("Last part of url: " + lastPart);
+
+var myIframe = document.getElementById('myIframe');
+var iframeSrc = myIframe.getAttribute("src");
+
+//console.log("Initial src value: " + myIframe.getAttribute("src"));
+
+myIframe.setAttribute("src", iframeSrc + lastPart);
+
+//console.log("src after appending: " + myIframe.getAttribute("src"));
+
+</script>
+
+<script language=JavaScript>
+
+var message="Sorry";
+///////////////////////////////////
+function clickIE4(){
+if (event.button==2){
+alert(message);
+return false;
+}
+}
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+alert(message);
+return false;
+}
+}
+}
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+document.oncontextmenu=new Function("alert(message);return false")
+// ->
+</script>
+</body>
+</html>
